@@ -231,4 +231,8 @@ span {
   .point--caption {
     width: 60%;
   }
+
+  .summary--heading {
+    font-size: 1.1rem;
+  }
 }
