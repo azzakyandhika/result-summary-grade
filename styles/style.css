@@ -1,0 +1,234 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: initial;
+  font-weight: normal;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+  --light-red: 0, 100%, 67%;
+  --orange-yellow: 39, 100%, 56%;
+  --green-teal: 166, 100%, 37%;
+  --cobalt-blue: 234, 85%, 45%;
+
+  /* gradient  */
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* neutral  */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  height: 100vh;
+}
+
+.outer-container {
+  width: clamp(320px, 100%, 720px);
+}
+
+.point--container {
+  width: clamp(100%, 320px, 50%);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--light-slate-blue) 2%, var(--light-royal-blue) 80%);
+  border-radius: 0 0 1.9rem 1.9rem;
+}
+
+.point--result {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: var(--light-lavender);
+}
+
+.grade--circle {
+  text-align: center;
+  border-radius: 50%;
+  padding: 1.25rem 2.2rem;
+  margin: 1rem 0;
+  background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.2), hsla(241, 72%, 46%, 0.1));
+}
+
+.grade--point {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.point--reaction {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin: 8px;
+}
+
+.point--caption {
+  text-align: center;
+  color: var(--light-lavender);
+  width: 80%;
+  font-size: 0.8rem;
+}
+
+.grade--percentage {
+  color: var(--light-lavender);
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 0.8rem, 1.5rem);
+}
+
+.summary--container {
+  padding: 1.8rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary--heading {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--dark-gray-blue);
+  margin-bottom: 20px;
+}
+
+.summary--result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 16px;
+  border: 1px solid white;
+  transition: all 0.3s;
+  margin-bottom: 0.998rem;
+  border-radius: 0.5rem;
+}
+
+.summary--result > div {
+  display: flex;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.summary--grade,
+span {
+  font-weight: 800;
+  color: black;
+}
+
+.summary--grade span {
+  opacity: 0.5;
+}
+
+.theme--teal {
+  background-color: hsla(var(--green-teal), 0.05);
+  color: hsl(var(--green-teal));
+}
+
+.theme--teal:hover {
+  border-color: var(--green-teal);
+}
+
+.theme--red {
+  background-color: hsla(var(--light-red), 0.05);
+  color: hsl(var(--light-red));
+}
+
+.theme--red:hover {
+  border-color: red;
+}
+
+.theme--cobalt {
+  background-color: hsla(var(--cobalt-blue), 0.05);
+  color: hsl(var(--cobalt-blue));
+}
+
+.theme--cobalt:hover {
+  border-color: var(--cobalt-blue);
+}
+
+.theme--yellow {
+  background-color: hsla(var(--orange-yellow), 0.05);
+  color: hsl(var(--orange-yellow));
+}
+
+.theme--yellow:hover {
+  border-color: var(--orange-yellow);
+}
+
+.btn-summary {
+  padding: 12px 25px;
+  border: unset;
+  border-radius: 28px;
+  color: white;
+  z-index: 1;
+  background: var(--dark-gray-blue);
+  position: relative;
+  font-weight: 800;
+  font-size: 17px;
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+.btn-summary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: var(--light-royal-blue);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.btn-summary:hover::before {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+
+  .outer-container {
+    display: flex;
+    border-radius: 1.9rem;
+    box-shadow: 2px 8px 16px 0 hsl(241, 100%, 89%);
+  }
+
+  .point--container {
+    height: 100%;
+    width: 50%;
+    border-radius: 1.9rem;
+  }
+
+  .summary--container {
+    width: 50%;
+  }
+
+  .grade--circle {
+    margin: 27px 0;
+    padding: 3.25rem 4.2rem;
+  }
+
+  .grade--circle h2 {
+    font-size: 3.2rem;
+  }
+
+  .point--caption {
+    width: 60%;
+  }
+}

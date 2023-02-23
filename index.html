@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="point--container">
+        <h1 class="point--result">Your Result</h1>
+        <div class="grade--circle">
+          <h2 class="grade--point">76</h2>
+          <span class="grade--percentage"> of 100</span>
+        </div>
+        <h2 class="point--reaction">Great</h2>
+        <p class="point--caption">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+
+      <div class="summary--container">
+        <h2 class="summary--heading">Summary</h2>
+        <div class="summary--result theme--red">
+          <div>
+            <img src="assets/images/icon-reaction.svg" alt="" />
+            <h2>Reaction</h2>
+          </div>
+          <h2 class="summary--grade">80 <span>/ 100</span></h2>
+        </div>
+        <div class="summary--result theme--yellow">
+          <div>
+            <img src="assets/images/icon-memory.svg" alt="" />
+            <h2>Memory</h2>
+          </div>
+          <h2 class="summary--grade">92 <span>/ 100</span></h2>
+        </div>
+        <div class="summary--result theme--teal">
+          <div>
+            <img src="assets/images/icon-verbal.svg" alt="" />
+            <h2>Verbal</h2>
+          </div>
+          <h2 class="summary--grade">61 <span>/ 100</span></h2>
+        </div>
+        <div class="summary--result theme--cobalt">
+          <div>
+            <img src="assets/images/icon-visual.svg" alt="" />
+            <h2>Visual</h2>
+          </div>
+          <h2 class="summary--grade">72 <span>/ 100</span></h2>
+        </div>
+        <button class="btn-summary"> Continue </button>
+      </div>
+    </div>
+  </body>
+</html>
